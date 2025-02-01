@@ -3,17 +3,16 @@
 2. [Project Background](#project-background)
 3. [Project Goals](#project-goals)
 4. [Insights and Recommendations](#insights-and-recommendations)
-   - [Category 1](#category-1)
-   - [Category 2](#category-2)
-   - [Category 3](#category-3)
-   - [Category 4](#category-4)
+   - [Category 1: Conversion Rates](#category-1-conversion-rates)
+   - [Category 2: Ad Impressions](#category-2-ad-impressions)
+   - [Category 3: User Engagement](#category-3-user-engagement)
+   - [Category 4: ROI Analysis](#category-4-roi-analysis)
 5. [Data Structure & Initial Checks](#data-structure-initial-checks)
 6. [Executive Summary](#executive-summary)
 7. [Insights Deep Dive](#insights-deep-dive)
-   - [Category 1](#category-1)
-   - [Category 2](#category-2)
-   - [Category 3](#category-3)
-   - [Category 4](#category-4)
+   - [Category 1: Conversion Rates](#category-1-conversion-rates)
+   - [Category 2: Ad Impressions](#category-2-ad-impressions)
+   - [Category 3: User Engagement](#category-3-user-engagement)
 8. [Recommendations](#recommendations)
 9. [Technical Details](#technical-details)
 10. [Assumptions and Caveats](#assumptions-and-caveats)
@@ -38,6 +37,7 @@ As a data analyst at Digital Wave, the primary goal of this analysis is to asses
 - **Insight 1:** Peak ad exposure times were between 11AM - 3PM .
 - **Recommendation:** Increase ad frequency during peak engagement hours.
   
+![output3](https://github.com/user-attachments/assets/ef228f38-e0f4-41b7-b664-aa617675ab32)
 
 ### Category 3: User Engagement
 - **Insight 1:** Personalized ads had higher engagement rates.
@@ -76,34 +76,29 @@ This analysis reveals that Campaign B achieved a higher conversion rate (2.55%) 
 ### Category 1: Conversion Rates
 - **Main Insight 1:** Campaign B achieved a 2.55% conversion rate, slightly higher than Campaign A's 1.79%.
 - **Main Insight 2:** Statistical analysis shows no significant difference (p = 0.243), with a 95% confidence interval of [-0.5%, 2.1%].
-- **Main Insight 3:** Conversion rates were higher during peak engagement hours (11AM - 3PM).
-- **Main Insight 4:** Personalized ads had higher conversion rates.
-
+- **Main Insight 3:** Campaign B had a higher ROI compared to Campaign A.
 ![converted distribution in Expermintal and controled groups](https://github.com/user-attachments/assets/038fa269-4b9b-4cd1-9f7c-0fb11ab445c1)
 
 ### Category 2: Ad Impressions
 - **Main Insight 1:** Users exposed to more ads had higher conversion rates.
 - **Main Insight 2:** Peak ad exposure times were between 11AM - 3PM on friday,sunday & Monday.
-![output](https://github.com/user-attachments/assets/c797a757-666c-4c6d-be77-cc40b3720d52)
 
-![output3](https://github.com/user-attachments/assets/ef228f38-e0f4-41b7-b664-aa617675ab32)
+![632](https://github.com/user-attachments/assets/830fc717-f5f3-4a02-8c7f-e6e798404e71)
+
 
 ### Category 3: User Engagement
-- **Main Insight 1:** Users who engaged with ads for longer durations had higher conversion rates.
+
 - **Main Insight 2:** Personalized ads had higher engagement rates.
 - **Main Insight 3:** Engagement rates were higher during peak hours.
 - **Main Insight 4:** Users who interacted with ads multiple times had higher conversion rates.
-
-
-### Category 4: ROI Analysis
-- **Main Insight 1:** Campaign B had a higher ROI compared to Campaign A.
+![56](https://github.com/user-attachments/assets/4f119be0-4b54-41dd-a4be-01ac02e213c6)
 
 
 ## Recommendations
 Based on the insights and findings above, we recommend the marketing team to consider the following:
 
 1. **Optimize Campaign B:** A/B testing variants (e.g., headlines, visuals) to identify high-performing creatives.
-2. **Increase Ad Frequency:** Focus on peak engagement hours (6-9 PM) and weekends.
+2. **Increase Ad Frequency:** Focus on peak engagement hours (11AM - 3PM) on friday,sunday & Monday.
 3. **Personalize Ads:** Use behavioral data to create personalized ad content.
 4. **Allocate Budget:** Allocate more budget to Campaign B for better ROI.
 5. **Monitor Metrics:** Continuously monitor post-test metrics (e.g., retention, ROI) for 8-12 weeks if Campaign B is retested.
