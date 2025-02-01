@@ -3,11 +3,12 @@
 ## Table of Contents
 1. [Title Page](#title-page)
 2. [Executive Summary](#executive-summary)
-3. [Introduction](#introduction)
-4. [Methodology](#methodology)
-5. [Findings](#findings)
-6. [Conclusion](#conclusion)
-7. [Recommendations](#recommendations)
+3. [Data Structure and Overview](#data-structure-and-overview)
+4. [Introduction](#introduction)
+5. [Methodology](#methodology)
+6. [Findings](#findings)
+7. [Conclusion](#conclusion)
+8. [Recommendations](#recommendations)
 
 ### Title Page
 **Title:** Marketing A/B Testing Analysis Report: Campaign A (PSA) vs. Campaign B (Ad)  
@@ -18,7 +19,62 @@ This report analyzes the performance of two marketing campaigns (A: Public Servi
 - Campaign B (Ad) achieved a 2.55% conversion rate, slightly higher than Campaign A (1.79%).
 - Statistical analysis shows no significant difference (p = 0.243), with a 95% confidence interval of [0.5%, 2.1%] (crossing 0).
 
-**Recommendation:** Do not adopt Campaign B as the difference is not statistically significant. Investigate alternative strategies or refine the experimental campaign.
+## Data Structure and Overview
+
+**Database Schema & Initial Checks**  
+
+This repository documents the database schema and initial validation checks for analyzing user ad exposure and conversion events.  
+
+**Database Structure**  
+
+The database consists of three primary tables: `Users`, `ad_exposure`, and `conversions`. Below is a breakdown of each table, including its schema and purpose.  
+
+**1. Users**  
+Stores unique user information.  
+
+| Column   | Data Type | Constraints    | Description                 |  
+|----------|----------|---------------|-----------------------------|  
+| `user_id` | INTEGER  | PRIMARY KEY    | Unique identifier for users |  
+
+**2. ad_exposure**  
+Tracks user interaction with advertisements.  
+
+| Column          | Data Type  | Constraints                 | Description                                         |  
+|---------------|----------|---------------------------|---------------------------------------------------|  
+| `user_id`      | INTEGER  | PRIMARY KEY, FOREIGN KEY (`Users.user_id`) | Links to the `Users` table                      |  
+| `test_group`   | VARCHAR(10) |  | A/B test group assignment (`control` / `treatment`) |  
+| `total_ads`    | INTEGER  |  | Total number of ads shown to the user            |  
+| `most_ads_day` | VARCHAR(10) |  | Day with the highest ad exposure (e.g., `"Monday"`) |  
+| `most_ads_hour` | INTEGER  |  | Hour of the day with the highest ad exposure     |  
+
+**3. conversions**  
+Stores user conversion events.  
+
+| Column     | Data Type | Constraints                 | Description                                 |  
+|-----------|----------|---------------------------|---------------------------------------------|  
+| `id`       | INTEGER  | PRIMARY KEY               | Unique identifier for each conversion event |  
+| `user_id`  | INTEGER  | FOREIGN KEY (`Users.user_id`) | Links to the `Users` table                |  
+| `converted` | BOOLEAN  |  | Indicates if the user converted            |  
+
+**Referential Integrity**  
+
+- `ad_exposure.user_id` → `Users.user_id`: Ensures that ad exposure data only exists for valid users.  
+- `conversions.user_id` → `Users.user_id`: Ensures that conversion records are linked to registered users.  
+
+**Initial Data Validation Checks**  
+
+Before running analyses, perform the following validation steps:  
+
+1. **Check for Missing Values**: Ensure all required fields are populated.  
+2. **Detect Duplicates**: Confirm that `user_id` in `Users` and `ad_exposure` is unique.  
+3. **Verify Data Consistency**:  
+   - Ensure `test_group` only contains valid values (`control`, `treatment`).  
+   - Confirm `converted` values are either `TRUE` or `FALSE`.  
+   - Validate `most_ads_day` contains valid day names (`Monday–Sunday`).  
+   - Ensure `most_ads_hour` is within the range `0–23`.  
+
+![Screenshot_1-2-2025_13394_dbdiagram io](https://github.com/user-attachments/assets/0d1b40dc-cb3c-4791-8f07-65af4fd9a5c0)
+
 
 ### Introduction
 **Purpose:**
