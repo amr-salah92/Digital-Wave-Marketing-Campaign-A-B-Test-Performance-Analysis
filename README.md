@@ -35,7 +35,7 @@ As a data analyst at Digital Wave, the primary goal of this analysis is to asses
 
 ### Category 2: Ad Impressions
 - **Main Insight 1:** Users exposed to more ads had higher conversion rates.
-- **Main Insight 2:** Peak ad exposure times were between 6-9 PM on weekends.
+- **Main Insight 2:** Peak ad exposure times were between 11AM - 3PM.
 - **Main Insight 3:** Ad frequency positively correlated with conversion rates.
 - **Main Insight 4:** Users who saw ads on multiple days had higher conversion rates.
  
