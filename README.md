@@ -86,7 +86,7 @@ The A/B test ran for four weeks, with users randomly assigned to either Campaign
 
 ### Methodology
 **Data Sources:**
-- **Dataset:** Marketing A/B Testing (Kaggle)
+- **Dataset:** [Marketing A/B Testing (Kaggle)](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing)
 - **Description:** Contains user IDs, campaign assignment, conversion status (True/False), and ad exposure metrics.
 - **Source:** Randomized controlled trial data from company records.
 - **Validity:** Cleaned (duplicates removed, missing values addressed).
@@ -94,6 +94,8 @@ The A/B test ran for four weeks, with users randomly assigned to either Campaign
 **Analysis Methods:**
 - **Statistical Tests:** Two proportion z-test for conversion rate comparison.
 - **Tools:** Python (Pandas, SciPy, Matplotlib, Seaborn).
+
+You can explore the analysis [here](https://github.com/amr-salah92/Digital-Wave-Marketing-Campaign-A-B-Test-Performance-Analysis/blob/main/abtesting2.ipynb).
 
 **Limitations:**
 - Small observed effect size.
