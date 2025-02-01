@@ -52,17 +52,27 @@ The Jupyter notebook file containing the Python code for the project can be foun
 ## Data Structure & Initial Checks
 The company's main database structure consists of three tables: Users, ad_exposure, and conversions, with a total row count of 100,000 records. A description of each table is as follows:
 
-### Table 1: Users
-- **Columns:** user_id (INTEGER, PRIMARY KEY)
-- **Description:** Stores unique user information.
+## Table 1: Users
+| Column   | Data Type | Constraints    | Description                 |
+|----------|-----------|----------------|-----------------------------|
+| `user_id` | INTEGER   | PRIMARY KEY    | Unique identifier for users |
 
-### Table 2: ad_exposure
-- **Columns:** user_id (INTEGER, PRIMARY KEY, FOREIGN KEY (Users.user_id)), test_group (VARCHAR(10)), total_ads (INTEGER), most_ads_day (VARCHAR(10)), most_ads_hour (INTEGER)
-- **Description:** Tracks user interaction with advertisements.
+## Table 2: ad_exposure
+| Column          | Data Type  | Constraints                 | Description                                         |
+|-----------------|------------|-----------------------------|-----------------------------------------------------|
+| `user_id`       | INTEGER    | PRIMARY KEY, FOREIGN KEY (`Users.user_id`) | Links to the `Users` table                      |
+| `test_group`    | VARCHAR(10)|                             | A/B test group assignment (`control` / `treatment`) |
+| `total_ads`     | INTEGER    |                             | Total number of ads shown to the user               |
+| `most_ads_day`  | VARCHAR(10)|                             | Day with the highest ad exposure (e.g., `"Monday"`) |
+| `most_ads_hour` | INTEGER    |                             | Hour of the day with the highest ad exposure        |
 
-### Table 3: conversions
-- **Columns:** id (INTEGER, PRIMARY KEY), user_id (INTEGER, FOREIGN KEY (Users.user_id)), converted (BOOLEAN)
-- **Description:** Stores user conversion events.
+## Table 3: conversions
+| Column     | Data Type | Constraints                 | Description                                 |
+|------------|-----------|-----------------------------|---------------------------------------------|
+| `id`       | INTEGER   | PRIMARY KEY                 | Unique identifier for each conversion event |
+| `user_id`  | INTEGER   | FOREIGN KEY (`Users.user_id`)| Links to the `Users` table                  |
+| `converted`| BOOLEAN   |                             | Indicates if the user converted             |
+
   
 ![Screenshot_1-2-2025_13394_dbdiagram io](https://github.com/user-attachments/assets/c0c9cd1b-5cdb-41d4-8e5f-6a4e8ea20e78)
 
