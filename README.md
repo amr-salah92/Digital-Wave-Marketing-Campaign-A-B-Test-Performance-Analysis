@@ -34,14 +34,17 @@ As a data analyst at Digital Wave, the primary goal of this analysis is to asses
 - **Recommendation:** Optimize Campaign B through A/B testing variants and segmenting audiences for personalized targeting.
 
 ### Category 2: Ad Impressions
-- **Insight 1:** Peak ad exposure times were between 11AM - 3PM .
-- **Recommendation:** Increase ad frequency during peak engagement hours.
-  
+- **Main Insight 1:** Users exposed to more ads had higher conversion rates.
+- **Main Insight 2:** Peak ad exposure times were between 6-9 PM on weekends.
+- **Main Insight 3:** Ad frequency positively correlated with conversion rates.
+- **Main Insight 4:** Users who saw ads on multiple days had higher conversion rates.
+ 
 ![output3](https://github.com/user-attachments/assets/ef228f38-e0f4-41b7-b664-aa617675ab32)
 
 ### Category 3: User Engagement
 - **Insight 1:** Personalized ads had higher engagement rates.
 - **Recommendation:** Use behavioral data to create personalized ad content.
+![693](https://github.com/user-attachments/assets/8990d620-5f7c-4e0f-8291-ddda48721af3)
 
 ### Category 4: ROI Analysis
 - **Insight 1:** Campaign B had a higher ROI compared to Campaign A.
